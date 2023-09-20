@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 const pageTitle = "Acerca de";
 
 const identity = {
-firstName: "Juan",
+firstName: "Boris",
 country: "Argentina",
 occupation: "Escritor técnico",
 hobbies: ["3D", "composicion Músical", "creacion de video juegos"],
@@ -11,9 +11,12 @@ hobbies: ["3D", "composicion Músical", "creacion de video juegos"],
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
 
-const happy = true;
-const finished = false;
-const goal = 3;
+// const happy = true;
+// const finished = false;
+// const goal = 3;
+
+const customLi = "rgb(133, 184, 255)";
+const fontWeight = "bold"
 ---
 
 <Layout title={pageTitle}>
@@ -42,8 +45,8 @@ const goal = 3;
       industria del cine y la publicidad.</p>
 
     <p>He aquí algunos datos sobre mí:</p>
-    <ul class="custom-list">
-      <li>Me llamo {identity.firstName}.</li>
+    <ul class="custom-list custom-li">
+      <li class="">Me llamo {identity.firstName}.</li>
       <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
       {identity.hobbies.length >= 2 &&
       <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
@@ -51,11 +54,19 @@ const goal = 3;
     </ul>
     <p>Mis habilidades son:</p>
     <ul class="custom-list">
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="custom-li">{skill}</li>)}
     </ul>
   </body>
 </Layout>
 
-<style>
+<style define:vars={{customLi, fontWeight}}>
+  h1 {
+    color: tomato;
+    font-size: 5rem;
+  }
 
+  .custom-li {
+    color: var(--customLi);
+    font-weight: var(--fontWeight);
+  }
 </style>
