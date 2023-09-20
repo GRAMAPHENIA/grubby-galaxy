@@ -1,16 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const pageTitle = "Acerca de";
+
+const identity = {
+firstName: "Juan",
+country: "Argentina",
+occupation: "Escritor técnico",
+hobbies: ["3D", "composicion Músical", "creacion de video juegos"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
-<Layout title="Hexágono || Acerca de">
+<Layout title={pageTitle}>
 
   <body>
-    <a href="/">Inicio </a>
-    <a href="/about/">Acerca de </a>
+    <a href="/">Inicio</a>
+    <a href="/about/">{pageTitle}</a>
     <a href="/blog/">Blog</a>
 
-    <h1>ACERCA DE</h1>
+    <h1>Nosotros</h1>
     <h2>... ¡Gramaphenicos!</h2>
+
+    <!-- {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+    {finished && <p>¡He terminado este tutorial!</p>}
+    {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>} -->
 
     <p>El diseño 3D es una disciplina creativa y técnica que se ha convertido en una parte integral de diversas
       industrias, desde la animación y los videojuegos hasta la arquitectura y la medicina. Esta técnica permite la
@@ -22,36 +40,22 @@ import Layout from '../layouts/Layout.astro';
       Blender, una herramienta de código abierto que ha ganado reconocimiento por su versatilidad y comunidad de
       usuarios activa. Otras soluciones incluyen Autodesk Maya y Cinema 4D, que son ampliamente utilizadas en la
       industria del cine y la publicidad.</p>
+
+    <p>He aquí algunos datos sobre mí:</p>
+    <ul class="custom-list">
+      <li>Me llamo {identity.firstName}.</li>
+      <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+      {identity.hobbies.length >= 2 &&
+      <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+      }
+    </ul>
+    <p>Mis habilidades son:</p>
+    <ul class="custom-list">
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
   </body>
 </Layout>
 
 <style>
-  body {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
 
-  h1 {
-    font-size: 4rem;
-    font-weight: 900;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-  a {
-    color: rgb(255, 171, 60);
-    padding: .5rem;
-    text-decoration: none;
-  }
-
-  a:hover{
-    text-underline-offset: .2rem;
-    text-decoration: underline;
-  }
 </style>

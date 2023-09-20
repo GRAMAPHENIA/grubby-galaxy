@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+title: string;
 }
 
 const { title } = Astro.props;
@@ -8,17 +8,20 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Astro description" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{title}</title>
+</head>
+
+<body>
+	<slot />
+</body>
+
 </html>
 
 <style is:global>
@@ -28,6 +31,25 @@ const { title } = Astro.props;
 		background-size: 224px;
 		overflow-y: scroll;
 	}
+
+	body {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 4rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	h1 {
+		font-size: 4rem;
+		font-weight: 900;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
 	code {
 		font-family:
 			Menlo,
@@ -38,36 +60,66 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
-			background: #0088ff3a;
-			padding: .3rem;
-			border-radius: 5px;
+		background: #0088ff3a;
+		padding: .3rem;
+		border-radius: 3px;
 	}
+
 	a {
-    color: rgb(255, 171, 60);
-    padding: .5rem;
-    text-decoration: none;
-  }
-  
-  a:hover{
-    text-underline-offset: .2rem;
-    text-decoration: underline;
-  }
+		color: rgb(255, 171, 60);
+		padding: .5rem;
+		text-decoration: none;
+		transition: text-decoration 0.3s ease-in-out, text-underline-offset 0.3s ease-in-out;
+
+	}
+
+	a:hover {
+		text-underline-offset: .2rem;
+		text-decoration: underline;
+
+	}
+
+	/* Ul */
+	.custom-list {
+		list-style: none;
+		/* Eliminar las viñetas predeterminadas */
+		padding: 0;
+		/* Eliminar el relleno predeterminado de la lista */
+	}
+
+	.custom-list li {
+		position: relative;
+		padding-left: 40px;
+		/* Espacio a la izquierda para la viñeta personalizada */
+	}
+
+	.custom-list li::before {
+		content: "\2022";
+		/* Código Unicode para un círculo lleno */
+		color: tomato;
+		/* Color de la viñeta */
+		font-size: 40px;
+		/* Tamaño del círculo personalizado */
+		position: absolute;
+		left: 15px;
+		top: -18px;
+	}
 
 	/* SCROLL */
-::-webkit-scrollbar {
-  width: 10px;
-}
+	::-webkit-scrollbar {
+		width: 10px;
+	}
 
-::-webkit-scrollbar-track {
-  background-color: #13151a;
-}
+	::-webkit-scrollbar-track {
+		background-color: #13151a;
+	}
 
-::-webkit-scrollbar-thumb {
-  background-color: #ab5353;
-  border-radius: 5px;
-}
+	::-webkit-scrollbar-thumb {
+		background-color: #ab5353;
+		border-radius: 5px;
+	}
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #ca3d3d;
-}
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #ca3d3d;
+	}
 </style>
