@@ -1,6 +1,6 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 html {
   font-family: system-ui, sans-serif;
@@ -25,7 +25,7 @@ h1 {
   line-height: 1;
   text-align: center;
   margin-bottom: 1em;
-  color: tomato;
+  color: rgba(71, 197, 255, 0.824);
 }
 
 code {
@@ -38,10 +38,7 @@ code {
 
 a {
   color: rgb(255, 171, 60);
-  padding: 0.5rem;
   text-decoration: none;
-  transition: text-decoration 0.3s ease-in-out,
-    text-underline-offset 0.3s ease-in-out;
 }
 
 a:hover {
