@@ -3,18 +3,24 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Hexágono || inicio">
-	<main>
+	<body>
+
+		<a href="/">Inicio </a>
+		<a href="/about/">Acerca de </a>
+		<a href="/blog/">Blog</a>
+
 		<h1>Bienvenido a <span class="">hexagono</span></h1>
 		<p class="">
-			Material completo en: <code class=""><a href="https://conceptohexagono.com/">https://conceptohexagono.com/</a></code><br />
+			Material completo en: <code
+				class=""><a href="https://conceptohexagono.com/">https://conceptohexagono.com/</a></code><br />
 			<strong>3D:</strong> Gramaphenia
 		</p>
 
-	</main>
+	</body>
 </Layout>
 
 <style>
-	main {
+	body {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
@@ -26,14 +32,10 @@ import Layout from '../layouts/Layout.astro';
 
 	h1 {
 		font-size: 4rem;
-		font-weight:900;
+		font-weight: 900;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
-	}
-
-	a{
-		color: rgb(255, 171, 60);
 	}
 
 </style>
