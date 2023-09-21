@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Mi tercera publicación en el blog
+title: Tres
 author: Astro 
 description: "Tuve algunos problemas, pero preguntar en la comunidad me ayudó mucho."
 image:

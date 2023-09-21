@@ -2,7 +2,7 @@
 import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
-<Layout title="Blog">
+<Layout title={frontmatter.title}>
   <h1> {frontmatter.title}</h1>
   <p>{frontmatter.pubDate.slice(0,10)}</p>
   <p><em>{frontmatter.description}</em></p>
