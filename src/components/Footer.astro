@@ -1,0 +1,22 @@
+---
+const platform = "github";
+const username = "gramaphenia";
+import Social from './Social.astro';
+---
+
+<footer>
+  <p>Más información sobre mis proyectos en <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+
+  <Social platform="instagram" username="gramaphenia" />
+  <!-- <Social platform="github" username="gramaphenia" /> -->
+  <Social platform="youtube" username="@gramaphenia" />
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    align-items: center;
+  }
+</style>
