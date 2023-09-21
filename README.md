@@ -1,3 +1,2 @@
 # Concepto Hexágono
-
-> Inicio
+> Blog creado en Astro con su tutorial.
