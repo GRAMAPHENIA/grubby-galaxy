@@ -1,11 +1,12 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Mares"
-pubDate: 2023-01-07
-description: "Este es la primera publicación de mi nuevo blog Astro."
-author: "Astro"
+title: Mi tercera publicación en el blog
+author: Astro 
+description: "Tuve algunos problemas, pero preguntar en la comunidad me ayudó mucho."
 image:
-  url: "https://docs.astro.build/assets/full-logo-light.png"
-  alt: "El logotipo completo de Astro."
-tags: ["astro", "bloguear", "aprender en público"]
+    url: "https://docs.astro.build/assets/rays.webp"
+    alt: "Miniatura de los rayos de Astro."
+pubDate: 2022-07-15
+tags: ["astro", "aprender en público", "contratiempos", "comunidad"]
 ---
+No siempre ha sido fácil, pero disfruto construyendo con Astro. Además, la [comunidad de Discord](https://astro.build/chat) es muy amable y servicial.

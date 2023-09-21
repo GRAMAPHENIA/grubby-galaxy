@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Mi segunda publicación en el blog
-author: Alumno de Astro
-description: "Después de aprender un poco de Astro, ¡no podía parar!"
+title: Mi tercera publicación en el blog
+author: Astro 
+description: "Tuve algunos problemas, pero preguntar en la comunidad me ayudó mucho."
 image:
-    url: "https://docs.astro.build/assets/arc.webp"
-    alt: "Miniatura de los arcos de Astro."
-pubDate: 2022-07-08
-tags: ["astro", "bloguear", "aprender en público", "éxitos"]
+    url: "https://docs.astro.build/assets/rays.webp"
+    alt: "Miniatura de los rayos de Astro."
+pubDate: 2022-07-15
+tags: ["astro", "aprender en público", "contratiempos", "comunidad"]
 ---
-> # Después de una exitosa primera semana aprendiendo Astro, decidí probar un poco más. Escribí e importé un pequeño componente de memoria.
+No siempre ha sido fácil, pero disfruto construyendo con Astro. Además, la [comunidad de Discord](https://astro.build/chat) es muy amable y servicial.
