@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Mares"
-pubDate: 01-07-2023
+pubDate: 2023-01-07
 description: "Este es la primera publicación de mi nuevo blog Astro."
 author: "Astro"
 image:
@@ -9,4 +9,3 @@ image:
   alt: "El logotipo completo de Astro."
 tags: ["astro", "bloguear", "aprender en público"]
 ---
-
