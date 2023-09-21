@@ -39,6 +39,7 @@ code {
 a {
   color: rgb(255, 171, 60);
   text-decoration: none;
+  padding: .3rem;
 }
 
 a:hover {
