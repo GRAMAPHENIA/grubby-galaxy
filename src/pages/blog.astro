@@ -8,9 +8,6 @@ const pageTitle = "Blog"
 <Layout title={pageTitle}>
   <body>
     <h1>Blog</h1>
-    <ul class="custom-list">
-         {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-    </ul>
     <h2>Explorando el Fascinante Mundo del Diseño 3D</h2>
     <p>
       En el emocionante universo del diseño contemporáneo, el diseño 3D ha emergido como una técnica innovadora que
@@ -52,5 +49,8 @@ const pageTitle = "Blog"
       emocionante y
       lleno de posibilidades creativas.
     </p>
+    <ul class="custom-list">
+         {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+    </ul>
   </body>
 </Layout>

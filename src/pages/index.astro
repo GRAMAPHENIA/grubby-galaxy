@@ -1,24 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Greeting from '../components/Greeting.jsx';
+// import Greeting from '../components/Greeting.jsx';
 const pageTitle = "Hexágono"
 ---
 
 <Layout title={pageTitle}>
-
 	<body>
 		<h1>Hexágono</h1>
-		<Greeting client:load messages={["Hej", "Hallo" , "Hola" , "Habari" ]} />
-
-
+		<!-- <Greeting client:load messages={["Hej", "Hallo" , "Hola" , "Habari" ]} /> -->
 		<p>
 			Preparando secciones
 		</p>
 	</body>
 </Layout>
-
-<style>
-	h1 {
-		font-size: 3rem;
-	}
-</style>

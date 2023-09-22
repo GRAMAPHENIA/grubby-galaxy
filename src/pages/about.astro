@@ -3,20 +3,13 @@ import Layout from '../layouts/Layout.astro';
 const pageTitle = "Acerca de";
 
 const identity = {
-firstName: "Boris",
+firstName: "juan",
 country: "Argentina",
 occupation: "Escritor técnico",
 hobbies: ["3D", "composicion Músical", "creacion de video juegos"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos", "Godot"];
-
-// const happy = true;
-// const finished = true;
-// const goal = 3;
-
-const customLi = "rgb(133, 184, 255)";
-const fontWeight = "bold"
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", , "Blender", "Godot", "Unity", "Unreal Engine","Redacción de documentos"];
 
 ---
 
@@ -25,10 +18,6 @@ const fontWeight = "bold"
   <body>
     <h1>Nosotros</h1>
     <h2>... ¡Gramaphenicos!</h2>
-
-    <!-- {happy && <p>¡Estoy feliz de aprender Astro!</p>}
-    {finished && <p>¡He terminado este tutorial!</p>}
-    {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>} -->
 
     <p>El diseño 3D es una disciplina creativa y técnica que se ha convertido en una parte integral de diversas
       industrias, desde la animación y los videojuegos hasta la arquitectura y la medicina. Esta técnica permite la
@@ -42,28 +31,17 @@ const fontWeight = "bold"
       industria del cine y la publicidad.</p>
 
     <p>He aquí algunos datos sobre mí:</p>
-    <ul class="custom-list custom-li">
-      <li class="">Me llamo {identity.firstName}.</li>
+    <ul class="custom-li-about">
+      <li class="custom-li-about">Me llamo {identity.firstName}.</li>
       <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+      <br>
       {identity.hobbies.length >= 2 &&
-      <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+      <li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[2]}</li>
       }
     </ul>
-    <p>Mis habilidades son:</p>
-    <ul class="custom-list">
-      {skills.map((skill) => <li class="custom-li">{skill}</li>)}
+    <p>Mis estudios versan sobre:</p>
+    <ul class="custom-list-about">
+      {skills.map((skill) => <li class="custom-li-about">{skill}</li>)}
     </ul>
   </body>
 </Layout>
-
-<style define:vars={{customLi, fontWeight}}>
-  h1 {
-    color: rgba(71, 197, 255, 0.824);
-    font-size: 4rem;
-  }
-
-  .custom-li {
-    color: var(--customLi);
-    font-weight: var(--fontWeight);
-  }
-</style>
