@@ -130,6 +130,15 @@ a:hover {
   left: 15px;
   top: -18px;
 }
+/* MODO DARK */
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
 
 /* SCROLL */
 ::-webkit-scrollbar {
