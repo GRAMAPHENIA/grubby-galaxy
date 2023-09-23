@@ -14,29 +14,29 @@ const title = "Índice de etiquetas"
 
 <style>
   a {
-    color: #92aac1;
+    color: var(--code-light);
     text-decoration: none;
   }
 
   a:hover {
-    color: #152737;
+    color: var(--dark);
   }
 
   .tags {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .tag {
-    margin: 0.25em;
-    border: solid 2px #233751;
-    border-radius: .3em;
-    padding: .01em .01em;
-    font-size: .9em;
-    background-color: #3a566f6e;
+    margin-top: 10rem;
   }
 
-.tag:hover {
-background-color: #6392bbb5;
-}
+  .tag {
+    margin: 0.15em;
+    border-radius: .25em;
+    padding: .01em .01em;
+    font-size: .9em;
+    background-color: var(--dark);
+  }
+ 
+  .tag:hover {
+    background-color: var(--code-light);
+  }
 </style>

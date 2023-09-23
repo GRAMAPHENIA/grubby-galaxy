@@ -4,7 +4,7 @@
   --rojo: #f87171;
   --naranja: #fb923c;
   --gris: #4b5563;
-  --code-dark: #9f1239;
+  --code-dark: #334155;
   --code-light: #d1d5db;
 }
 
@@ -30,7 +30,7 @@ h1 {
   font-weight: 900;
   line-height: 1;
   text-align: center;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
 }
 
 /* ESTILOS EN EL NAVBAR */
@@ -110,7 +110,7 @@ h1 {
 code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-  background: var(--code-light );
+  background: var(--code-light);
   padding: 0.1rem 0.3rem;
   border-radius: 3px;
   color: var(--dark);
@@ -126,7 +126,6 @@ a:hover {
   text-underline-offset: 0.2rem;
   text-decoration: underline;
 }
-
 
 .custom-list {
   list-style: none;
@@ -145,22 +144,29 @@ a:hover {
   display: block;
 }
 
-
 html.dark {
-  background-color: #13151a;
-  color: #d1d5db;
+  background-color: var(--dark);
+  color: var(--ligth);
 }
 body.dark {
-  color: #d1d5db;
+  color: var(--ligth);
 }
 .dark p {
-  color: rgb(235, 241, 244);
+  color: var(--ligth);
 }
 .dark h2 {
-  color: #d1d5db;
+  color: var(--ligth);
+}
+.dark code {
+  background: var(--code-dark);
+  color: white;
+}
+.dark .iconos-redes {
+  color: #fde68a;
+  font-weight: 900;
 }
 .dark .nav-links a {
-  color: #d1d5db;
+  color: var(--ligth);
 }
 .dark ::-webkit-scrollbar-thumb {
   background-color: var(--rojo);
@@ -171,10 +177,6 @@ body.dark {
 }
 .dark ::-webkit-scrollbar-thumb:hover {
   background-color: #ca3d3d;
-}
-.dark code {
-  background: var(--code-dark);
-  color: white;
 }
 
 /* SCROLL */

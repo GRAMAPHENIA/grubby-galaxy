@@ -8,17 +8,17 @@ const username = "gramaphenia";
 ---
 
 <footer>
-  <p>Más información sobre mis proyectos en
-    <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
-    !
+  <p >Más proyectos en
+    <a class="iconos-redes" href={`https://www.${platform}.com/${username}`}>{platform}!</a>
+    
   </p>
   <!-- <Social platform="instagram" username="gramaphenia" />
   <Social platform="youtube" username="@gramaphenia" /> -->
-  <a href="https://www.youtube.com/channel/@gramaphenia">
-    <IconoYoutube />
+  <a class="iconos-redes"  href="https://www.youtube.com/channel/@gramaphenia">
+    <IconoYoutube  />
   </a>
 
-  <a href="https://www.instagram.com/gramaphenia/">
+  <a class="iconos-redes"  href="https://www.instagram.com/gramaphenia/">
     <IconoInstagram />
   </a>
 
@@ -28,7 +28,14 @@ const username = "gramaphenia";
   footer {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
     align-items: center;
+    justify-content: center;
   }
+ 
+  a {
+    color:var(--dark);
+    font-weight: 900;
+  }
+ 
 </style>
